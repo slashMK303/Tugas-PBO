@@ -584,6 +584,7 @@ public class Pembayaran extends javax.swing.JFrame {
                     .addComponent(lbSisaSaldoWallet))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
@@ -756,7 +757,6 @@ public class Pembayaran extends javax.swing.JFrame {
         lbSisaSaldoKredit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbSisaSaldoKredit.setText("Rp. 0");
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -855,7 +855,6 @@ public class Pembayaran extends javax.swing.JFrame {
         lbSisaSaldoDebit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbSisaSaldoDebit.setText("Rp. 0");
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
