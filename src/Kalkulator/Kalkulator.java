@@ -28,7 +28,7 @@ public class Kalkulator {
 
     public double Bagi(double a, double b) {
         if (b == 0) {
-            throw new ArithmeticException("Pembagi tidak boleh nol.");
+            System.out.println("Pembagian tidak boleh angka 0");
         }
         return a / b;
     }
@@ -43,11 +43,5 @@ public class Kalkulator {
 
     public double Tan(double a) {
         return Math.tan(Math.toRadians(a));
-    }
-
-    double tambah(double angka1, double angka2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
+    } 
 }

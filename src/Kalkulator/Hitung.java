@@ -17,7 +17,7 @@ public class Hitung extends javax.swing.JFrame {
     public Hitung() {
         initComponents();
     }
-    
+
     Kalkulator kt = new Kalkulator();
 
     /**
@@ -313,15 +313,23 @@ public class Hitung extends javax.swing.JFrame {
         double a = Double.parseDouble(tbNilai1.getText());
         double b = Double.parseDouble(tbNilai2.getText());
         
-        double hasil = kt.Bagi(a, b);
+        if (a == 0) {
+            lbHasilSederhana.setText("Pembagian tidak boleh angka 0");
+        } else if (b == 0) {
+            lbHasilSederhana.setText("Pembagian tidak boleh angka 0");
+        } else {
+            double hasil = kt.Bagi(a, b);
         lbHasilSederhana.setText("" + String.valueOf(hasil));
+        }
+
+        
     }//GEN-LAST:event_btnBagiActionPerformed
 
     private void btnKaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKaliActionPerformed
         // TODO add your handling code here:
         double a = Double.parseDouble(tbNilai1.getText());
         double b = Double.parseDouble(tbNilai2.getText());
-        
+
         double hasil = kt.Kali(a, b);
         lbHasilSederhana.setText("" + String.valueOf(hasil));
     }//GEN-LAST:event_btnKaliActionPerformed
@@ -330,7 +338,7 @@ public class Hitung extends javax.swing.JFrame {
         // TODO add your handling code here:
         double a = Double.parseDouble(tbNilai1.getText());
         double b = Double.parseDouble(tbNilai2.getText());
-        
+
         double hasil = kt.Kurang(a, b);
         lbHasilSederhana.setText("" + String.valueOf(hasil));
     }//GEN-LAST:event_btnKurangActionPerformed
@@ -339,7 +347,7 @@ public class Hitung extends javax.swing.JFrame {
         // TODO add your handling code here:
         double a = Double.parseDouble(tbNilai1.getText());
         double b = Double.parseDouble(tbNilai2.getText());
-        
+
         double hasil = kt.Tambah(a, b);
         lbHasilSederhana.setText("" + String.valueOf(hasil));
     }//GEN-LAST:event_btnTambahActionPerformed
@@ -347,7 +355,7 @@ public class Hitung extends javax.swing.JFrame {
     private void btnSinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSinActionPerformed
         // TODO add your handling code here:
         double a = Double.parseDouble(tbNilaiTri.getText());
-        
+
         double hasil = kt.Sin(a);
         lbHasilTri.setText("" + String.valueOf(hasil));
     }//GEN-LAST:event_btnSinActionPerformed
@@ -355,7 +363,7 @@ public class Hitung extends javax.swing.JFrame {
     private void btnCosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCosActionPerformed
         // TODO add your handling code here:
         double a = Double.parseDouble(tbNilaiTri.getText());
-        
+
         double hasil = kt.Cos(a);
         lbHasilTri.setText("" + String.valueOf(hasil));
     }//GEN-LAST:event_btnCosActionPerformed
@@ -363,7 +371,7 @@ public class Hitung extends javax.swing.JFrame {
     private void btnTanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTanActionPerformed
         // TODO add your handling code here:
         double a = Double.parseDouble(tbNilaiTri.getText());
-        
+
         double hasil = kt.Tan(a);
         lbHasilTri.setText("" + String.valueOf(hasil));
     }//GEN-LAST:event_btnTanActionPerformed
