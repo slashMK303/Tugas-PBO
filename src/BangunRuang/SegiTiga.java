@@ -13,12 +13,10 @@ package BangunRuang;
 public class SegiTiga extends BangunDatar {
     double alas;
     double tinggi;
-    double sisiMiring;
     
-    public SegiTiga(double alas, double tinggi, double sisiMiring) {
+    public SegiTiga(double alas, double tinggi) {
         this.alas = alas;
         this.tinggi = tinggi;
-        this.sisiMiring = sisiMiring;
     }
     
     @Override
@@ -29,7 +27,7 @@ public class SegiTiga extends BangunDatar {
 
     @Override
     public double hitungKeliling() {
-        keliling = sisiMiring * 3;
+        keliling = alas * 3;
         return keliling;
     }
 }
