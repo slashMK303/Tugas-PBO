@@ -12,22 +12,20 @@ package BangunRuang;
  */
 public class Lingkaran extends BangunDatar {
     double jejari;
-    double diameter;
     
-    public Lingkaran(double jejari, double diameter) {
+    public Lingkaran(double jejari) {
         this.jejari = jejari;
-        this.diameter = diameter;
     }
     
     @Override
     public double hitungLuas() {
-        luas = 2 * Math.PI * jejari;
+        luas = Math.PI * jejari * jejari;
         return luas;
     }
     
     @Override
     public double hitungKeliling() {
-        keliling = Math.PI * diameter;
+        keliling = 2 * Math.PI * jejari;
         return keliling;
     }
 }
