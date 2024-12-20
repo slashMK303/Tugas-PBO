@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package BangunRuang;
+package bangunDatar;
 
 /**
  *
@@ -111,10 +111,10 @@ public class MainBangunRuang extends javax.swing.JFrame {
 
         jLabel15.setText("jLabel15");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Hitung Bangun Datar");
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel1.setText("Bangun Ruang");
+        jLabel1.setText("Bangun Datar");
 
         jLabel2.setText("Sisi");
 
@@ -519,7 +519,7 @@ public class MainBangunRuang extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addGap(124, 124, 124)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
