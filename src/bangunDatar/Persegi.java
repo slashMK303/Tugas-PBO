@@ -1,4 +1,4 @@
-package BangunRuang;
+package bangunDatar;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,26 +10,23 @@ package BangunRuang;
  *
  * @author hp
  */
-public class SegiTiga extends BangunDatar {
-    double alas;
-    double tinggi;
-    double sisiMiring;
+public class Persegi extends BangunDatar {
+    double sisi;
     
-    public SegiTiga(double alas, double tinggi, double sisiMiring) {
-        this.alas = alas;
-        this.tinggi = tinggi;
-        this.sisiMiring = sisiMiring;
+    public Persegi(double sisi) {
+        this.sisi = sisi;
     }
-    
+
     @Override
     public double hitungLuas() {
-        luas = 0.5 * alas * tinggi;
+        luas = sisi * sisi;
         return luas;
     }
 
     @Override
     public double hitungKeliling() {
-        keliling = sisiMiring * 3;
+        keliling = 4 * sisi;
         return keliling;
     }
+
 }

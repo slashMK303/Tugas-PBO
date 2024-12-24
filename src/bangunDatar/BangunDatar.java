@@ -1,4 +1,4 @@
-package BangunRuang;
+package bangunDatar;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,24 +10,15 @@ package BangunRuang;
  *
  * @author hp
  */
-public class Lingkaran extends BangunDatar {
-    double jejari;
-    double diameter;
+public class BangunDatar {
+    double luas;
+    double keliling;;
     
-    public Lingkaran(double jejari, double diameter) {
-        this.jejari = jejari;
-        this.diameter = diameter;
-    }
-    
-    @Override
     public double hitungLuas() {
-        luas = 2 * Math.PI * jejari;
         return luas;
     }
     
-    @Override
     public double hitungKeliling() {
-        keliling = Math.PI * diameter;
         return keliling;
     }
 }

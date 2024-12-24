@@ -72,7 +72,7 @@ public class Pembayaran extends javax.swing.JFrame {
         cmbNama = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Metode Pembayaran");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(231, 251, 180));
@@ -509,7 +509,6 @@ public class Pembayaran extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHitungKembalianActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
-        // TODO add your handling code here:
         cbNasgor.setSelected(false);
         cbSoto.setSelected(false);
         cbBakso.setSelected(false);
@@ -525,7 +524,6 @@ public class Pembayaran extends javax.swing.JFrame {
         rbCash.setSelected(true);
         lbKembalian.setText("0 (+Rp. 0");
     }//GEN-LAST:event_btnResetActionPerformed
-
     /**
      * @param args the command line arguments
      */
