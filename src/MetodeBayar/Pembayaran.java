@@ -4,7 +4,6 @@
  */
 package metodeBayar;
 
-import MetodeBayar.PembayaranBelanja;
 import javax.swing.JOptionPane;
 
 /**
@@ -502,7 +501,7 @@ public class Pembayaran extends javax.swing.JFrame {
             total_kembalian = kembalian - biaya_layanan;
         }
         
-        if (total_kembalian <= 0) {
+        if (total_kembalian < 0) {
             JOptionPane.showMessageDialog(this, "Saldo atau uang Anda tidak cukup", "Peringata!", JOptionPane.ERROR_MESSAGE);
         }
         lbKembalian.setText("Rp. " + String.valueOf(total_kembalian) + "(+Rp. " + String.valueOf(biaya_layanan) + ")");
