@@ -5,6 +5,8 @@
  */
 package metodeBayar;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author hp
@@ -818,6 +820,9 @@ public class Pembayaran extends javax.swing.JFrame {
         
         double kembalian = pb.BayarGoPay(Integer.parseInt(pilihan), saldo, totalBelanja);
         lbSisaSaldoGopay.setText("Rp. " + String.valueOf(kembalian));
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
         
         switch (pilihan) {
             case "1123":
@@ -853,6 +858,10 @@ public class Pembayaran extends javax.swing.JFrame {
         double kembalian = pb.BayarShopee(Integer.parseInt(pilihan), saldo, totalBelanja);
         lbSisaSaldoShopeepay.setText("Rp. " + String.valueOf(kembalian));
         
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
+        
         switch (pilihan) {
             case "6123":
                 lbNamaShopeepay.setText("Andika");
@@ -886,6 +895,11 @@ public class Pembayaran extends javax.swing.JFrame {
         double kembalian = pb.BayarCash(uangTunai, totalBelanja);
         
         lbTotalKembalianCash.setText(String.valueOf(kembalian));
+        
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Uang tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_btnHitungKembalianCashActionPerformed
 
     private void btnResetCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetCashActionPerformed
@@ -903,6 +917,11 @@ public class Pembayaran extends javax.swing.JFrame {
         double totalBelanja = Double.parseDouble(tbTotalBelanjaQris.getText());
         
         double kembalian = pb.BayarQris(saldo, pilihan, totalBelanja);
+        
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
+        
         lbTotalKembalianQris.setText("Rp. " + String.valueOf(kembalian));
     }//GEN-LAST:event_btnHitungKembalianQrisActionPerformed
 
@@ -941,6 +960,10 @@ public class Pembayaran extends javax.swing.JFrame {
         double totalBelanja = Double.parseDouble(tbTotalBelanjaWallet.getText());
         
         double kembalian = pb.BayareWallet(saldo, pin, Integer.parseInt(pilihan), totalBelanja);
+        
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
         lbSisaSaldoWallet.setText("Rp. " + String.valueOf(kembalian));
     }//GEN-LAST:event_btnHitungKembalianWalletActionPerformed
 
@@ -980,6 +1003,11 @@ public class Pembayaran extends javax.swing.JFrame {
         double totalBelanja = Double.parseDouble(tbTotalBelanjaKredit.getText());
         
         double kembalian = pb.BayarKreditCard(saldo, pin, Integer.parseInt(pilihan), totalBelanja);
+        
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
+        
         lbSisaSaldoKredit .setText("Rp. " + String.valueOf(kembalian));
     }//GEN-LAST:event_btnHitungKembalianKreditActionPerformed
 
@@ -1010,6 +1038,11 @@ public class Pembayaran extends javax.swing.JFrame {
         double totalBelanja = Double.parseDouble(tbTotalBelanjaDebit.getText());
         
         double kembalian = pb.BayarDebitCard(saldo, pin, Integer.parseInt(pilihan), totalBelanja);
+        
+        if (kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo tidak mencukupi", "Peringatan", JOptionPane.ERROR_MESSAGE);
+        }
+        
         lbSisaSaldoDebit .setText("Rp. " + String.valueOf(kembalian));
     }//GEN-LAST:event_btnHitungKembalianDebitActionPerformed
 
