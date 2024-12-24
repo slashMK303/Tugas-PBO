@@ -355,7 +355,8 @@ public class Hitung extends javax.swing.JFrame {
         double a = Double.parseDouble(tbNilaiTri.getText());
 
         double hasil = kt.Sin(a);
-        lbHasilTri.setText("" + String.valueOf(hasil));
+        String hasilFormat = String.format("%.3f", hasil);
+        lbHasilTri.setText(hasilFormat);
     }//GEN-LAST:event_btnSinActionPerformed
 
     private void btnCosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCosActionPerformed
@@ -363,7 +364,8 @@ public class Hitung extends javax.swing.JFrame {
         double a = Double.parseDouble(tbNilaiTri.getText());
 
         double hasil = kt.Cos(a);
-        lbHasilTri.setText("" + String.valueOf(hasil));
+        String hasilFormat = String.format("%.3f", hasil);
+        lbHasilTri.setText(hasilFormat);
     }//GEN-LAST:event_btnCosActionPerformed
 
     private void btnTanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTanActionPerformed
@@ -371,7 +373,8 @@ public class Hitung extends javax.swing.JFrame {
         double a = Double.parseDouble(tbNilaiTri.getText());
 
         double hasil = kt.Tan(a);
-        lbHasilTri.setText("" + String.valueOf(hasil));
+        String hasilFormat = String.format("%.3f", hasil);
+        lbHasilTri.setText(hasilFormat);
     }//GEN-LAST:event_btnTanActionPerformed
 
     private void tbNilai1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbNilai1ActionPerformed
