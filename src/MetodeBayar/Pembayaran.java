@@ -1,23 +1,26 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package MetodeBayar;
+package metodeBayar;
+
+import MetodeBayar.PembayaranBelanja;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author hp
+ * @author victus
  */
 public class Pembayaran extends javax.swing.JFrame {
 
     /**
-     * Creates new form Pembayaran
+     * Creates new form PembayaranDemo
      */
     public Pembayaran() {
         initComponents();
     }
     
+    double totalPembelian = 0;
     PembayaranBelanja pb = new PembayaranBelanja();
 
     /**
@@ -29,117 +32,165 @@ public class Pembayaran extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        pembelian = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
+        cbSoto = new javax.swing.JCheckBox();
+        cbBakso = new javax.swing.JCheckBox();
+        cbNasgor = new javax.swing.JCheckBox();
+        cbMieAyam = new javax.swing.JCheckBox();
+        cbAyamGeprek = new javax.swing.JCheckBox();
+        cbEsTeh = new javax.swing.JCheckBox();
+        cbEsJeruk = new javax.swing.JCheckBox();
+        cbEsCampur = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        tbTotalBelanjaGopay = new javax.swing.JTextField();
-        tbSaldoGopay = new javax.swing.JTextField();
-        btnHitungKembalianGopay = new javax.swing.JButton();
-        btnReset = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        lbNamaGopay = new javax.swing.JLabel();
-        cbIdUserGopay = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        lbSisaSaldoGopay = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        tbSaldoShopeepay = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        tbTotalBelanjaShopeepay = new javax.swing.JTextField();
-        btnHitungKembalianShopeepay = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        lbNamaShopeepay = new javax.swing.JLabel();
-        btnResetShopeepay = new javax.swing.JButton();
-        cbIdUserShopeepay = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        lbSisaSaldoShopeepay = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        btnHitungPembelian = new javax.swing.JButton();
+        lbPembelian = new javax.swing.JLabel();
+        tbSaldoPembeli = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        tbTotalBelanjaCash = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        tbUangTunaiCash = new javax.swing.JTextField();
-        btnHitungKembalianCash = new javax.swing.JButton();
-        btnResetCash = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        rbGopay = new javax.swing.JRadioButton();
+        rbShopeepay = new javax.swing.JRadioButton();
+        rbQris = new javax.swing.JRadioButton();
+        rbEwallet = new javax.swing.JRadioButton();
+        rbKartuDebit = new javax.swing.JRadioButton();
+        rbKartuKredit = new javax.swing.JRadioButton();
+        rbCash = new javax.swing.JRadioButton();
         jLabel14 = new javax.swing.JLabel();
-        lbTotalKembalianCash = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        cbKodeVoucherQris = new javax.swing.JComboBox<>();
-        jLabel16 = new javax.swing.JLabel();
-        tbSaldoQris = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        tbTotalBelanjaQris = new javax.swing.JTextField();
-        btnHitungKembalianQris = new javax.swing.JButton();
-        btnResetQris = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        lbTotalKembalianQris = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        cbNoRekWallet = new javax.swing.JComboBox<>();
-        jLabel20 = new javax.swing.JLabel();
-        tbSaldoWallet = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        tbTotalBelanjaWallet = new javax.swing.JTextField();
-        btnHitungKembalianWallet = new javax.swing.JButton();
-        btnResetWallet = new javax.swing.JButton();
-        jLabel22 = new javax.swing.JLabel();
-        lbNamaWallet = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        lbSisaSaldoWallet = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        cbNoRekKredit = new javax.swing.JComboBox<>();
-        jLabel25 = new javax.swing.JLabel();
-        tbSaldoKredit = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        tbTotalBelanjaKredit = new javax.swing.JTextField();
-        btnHitungKembalianKredit = new javax.swing.JButton();
-        btnResetKredit = new javax.swing.JButton();
-        jLabel27 = new javax.swing.JLabel();
-        lbNamaKredit = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        lbSisaSaldoKredit = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel29 = new javax.swing.JLabel();
-        cbNoRekDebit = new javax.swing.JComboBox<>();
-        jLabel30 = new javax.swing.JLabel();
-        tbSaldoDebit = new javax.swing.JTextField();
-        jLabel31 = new javax.swing.JLabel();
-        tbTotalBelanjaDebit = new javax.swing.JTextField();
-        btnHitungKembalianDebit = new javax.swing.JButton();
-        btnResetDebit = new javax.swing.JButton();
-        jLabel32 = new javax.swing.JLabel();
-        lbNamaDebit = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        lbSisaSaldoDebit = new javax.swing.JLabel();
+        lbKembalian = new javax.swing.JLabel();
+        btnReset = new javax.swing.JButton();
+        btnHitungKembalian = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        cmbNama = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
-        jLabel1.setText("Metode Pembayaran");
+        jPanel1.setBackground(new java.awt.Color(231, 251, 180));
 
-        jPanel1.setBackground(new java.awt.Color(135, 206, 235));
+        cbSoto.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbSoto.setText("Soto Ayam/Sapi");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setText("ID User");
+        cbBakso.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbBakso.setText("Bakso");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setText("Saldo GoPay");
+        cbNasgor.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbNasgor.setText("Nasi Goreng");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setText("Total Perbelanjaan");
+        cbMieAyam.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbMieAyam.setText("Mie Ayam");
 
-        btnHitungKembalianGopay.setText("Hitung Kembalian");
-        btnHitungKembalianGopay.addActionListener(new java.awt.event.ActionListener() {
+        cbAyamGeprek.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbAyamGeprek.setText("Ayam Geprek/Penyet");
+
+        cbEsTeh.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbEsTeh.setText("Es Teh");
+
+        cbEsJeruk.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbEsJeruk.setText("Es Jeruk");
+        cbEsJeruk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianGopayActionPerformed(evt);
+                cbEsJerukActionPerformed(evt);
             }
         });
+
+        cbEsCampur.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        cbEsCampur.setText("Es Campur");
+        cbEsCampur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEsCampurActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel2.setText("Rp. 12000");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel3.setText("Rp. 7000");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel4.setText("Rp. 15000");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel5.setText("Rp. 13000");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel6.setText("Rp. 10000");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel7.setText("Rp. 3000");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel8.setText("Rp. 4000");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel9.setText("Rp. 7000");
+
+        jPanel2.setBackground(new java.awt.Color(205, 193, 255));
+
+        btnHitungPembelian.setText("Hitung Pembelian");
+        btnHitungPembelian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHitungPembelianActionPerformed(evt);
+            }
+        });
+
+        lbPembelian.setFont(new java.awt.Font("Segoe UI Variable", 1, 14)); // NOI18N
+        lbPembelian.setText("0");
+
+        tbSaldoPembeli.setEditable(false);
+        tbSaldoPembeli.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel11.setText("Saldo/Uang Pembeli");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel12.setText("Metode Pembayaran (fee)");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel13.setText("Total");
+
+        pembelian.add(rbGopay);
+        rbGopay.setText("GoPay (3%)");
+
+        pembelian.add(rbShopeepay);
+        rbShopeepay.setText("ShopeePay (3%)");
+
+        pembelian.add(rbQris);
+        rbQris.setText("QRIS (5%)");
+
+        pembelian.add(rbEwallet);
+        rbEwallet.setText("e-wallet (7%)");
+
+        pembelian.add(rbKartuDebit);
+        rbKartuDebit.setText("kartu Debit (Rp. 3k)");
+
+        pembelian.add(rbKartuKredit);
+        rbKartuKredit.setText("Kartu Kredit (Rp. 5k)");
+
+        pembelian.add(rbCash);
+        rbCash.setSelected(true);
+        rbCash.setText("Cash (0%)");
+        rbCash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbCashActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel14.setText("Kembalian (terasuk fee)");
+
+        lbKembalian.setFont(new java.awt.Font("Segoe UI Variable", 1, 14)); // NOI18N
+        lbKembalian.setText("Rp. 0 (+Rp. 0)");
 
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
@@ -148,888 +199,332 @@ public class Pembayaran extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Nama User :");
-
-        lbNamaGopay.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbNamaGopay.setText("-");
-
-        cbIdUserGopay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1123", "1234", "1345", "1456" }));
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel6.setText("Sisa Saldo : ");
-
-        lbSisaSaldoGopay.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbSisaSaldoGopay.setText("Rp. 0");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(btnHitungKembalianGopay)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 324, Short.MAX_VALUE)
-                            .addComponent(btnReset))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(tbSaldoGopay, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(tbTotalBelanjaGopay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                                .addComponent(cbIdUserGopay, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbSisaSaldoGopay)
-                            .addComponent(lbNamaGopay))))
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(cbIdUserGopay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(tbSaldoGopay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(tbTotalBelanjaGopay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianGopay)
-                    .addComponent(btnReset))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(lbNamaGopay))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(lbSisaSaldoGopay))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("GoPay", jPanel1);
-
-        jPanel2.setBackground(new java.awt.Color(255, 182, 193));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setText("ID User");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel8.setText("Saldo ShopeePay");
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel9.setText("Total Perbelanjaan");
-
-        btnHitungKembalianShopeepay.setText("Hitung Kembalian");
-        btnHitungKembalianShopeepay.addActionListener(new java.awt.event.ActionListener() {
+        btnHitungKembalian.setText("Hitung Kembalian");
+        btnHitungKembalian.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianShopeepayActionPerformed(evt);
+                btnHitungKembalianActionPerformed(evt);
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel10.setText("Nama User :");
+        jLabel10.setFont(new java.awt.Font("Segoe UI Variable", 1, 14)); // NOI18N
+        jLabel10.setText("Rp.");
 
-        lbNamaShopeepay.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbNamaShopeepay.setText("-");
-
-        btnResetShopeepay.setText("Reset");
-        btnResetShopeepay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetShopeepayActionPerformed(evt);
-            }
-        });
-
-        cbIdUserShopeepay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6123", "6234", "6345", "6456" }));
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel13.setText("Sisa Saldo : ");
-
-        lbSisaSaldoShopeepay.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbSisaSaldoShopeepay.setText("Rp. 0");
+        cmbNama.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Andika", "Nanang", "Maulvi", "Umum" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnHitungKembalianShopeepay)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnResetShopeepay)
-                            .addComponent(tbSaldoShopeepay)
-                            .addComponent(tbTotalBelanjaShopeepay, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                            .addComponent(cbIdUserShopeepay, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel13)
+                                    .addComponent(btnHitungPembelian)
+                                    .addComponent(rbEwallet)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(rbShopeepay)
+                                            .addComponent(rbGopay)
+                                            .addComponent(rbQris))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(rbCash)
+                                            .addComponent(rbKartuKredit)
+                                            .addComponent(rbKartuDebit)))
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel12))
+                                .addGap(0, 64, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnHitungKembalian)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(lbKembalian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnReset))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel13))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbSisaSaldoShopeepay)
-                            .addComponent(lbNamaShopeepay)))))
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbPembelian, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tbSaldoPembeli, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbNama, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(13, Short.MAX_VALUE)
+                .addComponent(cmbNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHitungPembelian)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(cbIdUserShopeepay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbPembelian)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tbSaldoPembeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbGopay)
+                    .addComponent(rbKartuKredit))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbShopeepay)
+                    .addComponent(rbKartuDebit))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbQris)
+                    .addComponent(rbCash))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbEwallet)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHitungKembalian)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbKembalian)
+                    .addComponent(btnReset))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbNasgor)
+                    .addComponent(cbSoto)
+                    .addComponent(cbBakso)
+                    .addComponent(cbMieAyam)
+                    .addComponent(cbAyamGeprek)
+                    .addComponent(cbEsTeh)
+                    .addComponent(cbEsJeruk)
+                    .addComponent(cbEsCampur))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(tbSaldoShopeepay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(tbTotalBelanjaShopeepay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianShopeepay)
-                    .addComponent(btnResetShopeepay))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(lbNamaShopeepay))
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbNasgor)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(lbSisaSaldoShopeepay))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("ShopeePay", jPanel2);
-
-        jPanel3.setBackground(new java.awt.Color(152, 255, 152));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel11.setText("Uang Tunai");
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel12.setText("Total Perbelanjaan");
-
-        btnHitungKembalianCash.setText("Hitung Kembalian");
-        btnHitungKembalianCash.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianCashActionPerformed(evt);
-            }
-        });
-
-        btnResetCash.setText("Reset");
-        btnResetCash.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetCashActionPerformed(evt);
-            }
-        });
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel14.setText("Total Kembalian");
-
-        lbTotalKembalianCash.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbTotalKembalianCash.setText("Rp. 0");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbTotalKembalianCash))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(btnHitungKembalianCash)
-                            .addGap(324, 324, 324)
-                            .addComponent(btnResetCash))
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel12))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tbUangTunaiCash, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tbTotalBelanjaCash, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(tbUangTunaiCash, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(tbTotalBelanjaCash, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianCash)
-                    .addComponent(btnResetCash))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(lbTotalKembalianCash))
-                .addContainerGap(101, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Cash", jPanel3);
-
-        jPanel4.setBackground(new java.awt.Color(230, 230, 250));
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel15.setText("Kode Voucher");
-
-        cbKodeVoucherQris.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tidak Ada", "Diskon10", "Diskon25", "Diskon50" }));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel16.setText("Saldo QRIS");
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel17.setText("Total Perbelanjaan");
-
-        btnHitungKembalianQris.setText("Hitung Kembalian");
-        btnHitungKembalianQris.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianQrisActionPerformed(evt);
-            }
-        });
-
-        btnResetQris.setText("Reset");
-        btnResetQris.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetQrisActionPerformed(evt);
-            }
-        });
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel18.setText("Total Setelah Voucher dipakai :");
-
-        lbTotalKembalianQris.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbTotalKembalianQris.setText("Rp. 0");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnHitungKembalianQris)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel17))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnResetQris)
-                            .addComponent(tbSaldoQris)
-                            .addComponent(tbTotalBelanjaQris, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                            .addComponent(cbKodeVoucherQris, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbTotalKembalianQris))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(cbKodeVoucherQris, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(tbSaldoQris, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(tbTotalBelanjaQris, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianQris)
-                    .addComponent(btnResetQris))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(lbTotalKembalianQris))
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("QRIS", jPanel4);
-
-        jPanel5.setBackground(new java.awt.Color(189, 178, 255));
-
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel19.setText("Nomor Rekening");
-
-        cbNoRekWallet.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "12345678", "13456789", "14567890", "15678901" }));
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel20.setText("Saldo e-wallet");
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel21.setText("Total Perbelanjaan");
-
-        btnHitungKembalianWallet.setText("Hitung Kembalian");
-        btnHitungKembalianWallet.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianWalletActionPerformed(evt);
-            }
-        });
-
-        btnResetWallet.setText("Reset");
-        btnResetWallet.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetWalletActionPerformed(evt);
-            }
-        });
-
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel22.setText("Nama Rekening :");
-
-        lbNamaWallet.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbNamaWallet.setText("-");
-
-        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel23.setText("Sisa Saldo : ");
-
-        lbSisaSaldoWallet.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbSisaSaldoWallet.setText("Rp. 0");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnHitungKembalianWallet)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel21))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnResetWallet)
-                            .addComponent(tbSaldoWallet)
-                            .addComponent(tbTotalBelanjaWallet, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                            .addComponent(cbNoRekWallet, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel22)
-                            .addComponent(jLabel23))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbSisaSaldoWallet)
-                            .addComponent(lbNamaWallet)))))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(cbNoRekWallet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(tbSaldoWallet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(tbTotalBelanjaWallet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianWallet)
-                    .addComponent(btnResetWallet))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel22)
-                    .addComponent(lbNamaWallet))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbSoto)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(lbSisaSaldoWallet))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("e-Wallet", jPanel5);
-
-        jPanel6.setBackground(new java.awt.Color(173, 216, 230));
-
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel24.setText("Nomor Rekening");
-
-        cbNoRekKredit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "21234567", "22345678", "23456789", "24567890" }));
-
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel25.setText("Saldo e-wallet");
-
-        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel26.setText("Total Perbelanjaan");
-
-        btnHitungKembalianKredit.setText("Hitung Kembalian");
-        btnHitungKembalianKredit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianKreditActionPerformed(evt);
-            }
-        });
-
-        btnResetKredit.setText("Reset");
-        btnResetKredit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetKreditActionPerformed(evt);
-            }
-        });
-
-        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel27.setText("Nama Rekening :");
-
-        lbNamaKredit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbNamaKredit.setText("-");
-
-        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel28.setText("Sisa Saldo : ");
-
-        lbSisaSaldoKredit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbSisaSaldoKredit.setText("Rp. 0");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnHitungKembalianKredit)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel24)
-                            .addComponent(jLabel25)
-                            .addComponent(jLabel26))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnResetKredit)
-                            .addComponent(tbSaldoKredit)
-                            .addComponent(tbTotalBelanjaKredit, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                            .addComponent(cbNoRekKredit, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel28))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbSisaSaldoKredit)
-                            .addComponent(lbNamaKredit)))))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(cbNoRekKredit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(tbSaldoKredit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(tbTotalBelanjaKredit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianKredit)
-                    .addComponent(btnResetKredit))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27)
-                    .addComponent(lbNamaKredit))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbBakso)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(lbSisaSaldoKredit))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Kartu Kredit", jPanel6);
-
-        jPanel7.setBackground(new java.awt.Color(255, 218, 185));
-
-        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel29.setText("Nomor Rekening");
-
-        cbNoRekDebit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "31234567", "32345678", "33456789", "34567890" }));
-
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel30.setText("Saldo e-wallet");
-
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel31.setText("Total Perbelanjaan");
-
-        btnHitungKembalianDebit.setText("Hitung Kembalian");
-        btnHitungKembalianDebit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHitungKembalianDebitActionPerformed(evt);
-            }
-        });
-
-        btnResetDebit.setText("Reset");
-        btnResetDebit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetDebitActionPerformed(evt);
-            }
-        });
-
-        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel32.setText("Nama Rekening :");
-
-        lbNamaDebit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbNamaDebit.setText("-");
-
-        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel33.setText("Sisa Saldo : ");
-
-        lbSisaSaldoDebit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbSisaSaldoDebit.setText("Rp. 0");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnHitungKembalianDebit)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel31))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnResetDebit)
-                            .addComponent(tbSaldoDebit)
-                            .addComponent(tbTotalBelanjaDebit, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                            .addComponent(cbNoRekDebit, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel32)
-                            .addComponent(jLabel33))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbSisaSaldoDebit)
-                            .addComponent(lbNamaDebit)))))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
-                    .addComponent(cbNoRekDebit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(tbSaldoDebit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(tbTotalBelanjaDebit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitungKembalianDebit)
-                    .addComponent(btnResetDebit))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel32)
-                    .addComponent(lbNamaDebit))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbMieAyam)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
-                    .addComponent(lbSisaSaldoDebit))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbAyamGeprek)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbEsTeh)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbEsJeruk)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbEsCampur)
+                    .addComponent(jLabel9))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Kartu Debit", jPanel7);
+        jLabel1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Metode Pembayaran");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(168, 168, 168)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnHitungKembalianGopayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianGopayActionPerformed
+    private void cbEsJerukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEsJerukActionPerformed
         // TODO add your handling code here:
-        String pilihan = String.valueOf(cbIdUserGopay.getSelectedItem());
-        double saldo = Double.parseDouble(tbSaldoGopay.getText());
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaGopay.getText());
+    }//GEN-LAST:event_cbEsJerukActionPerformed
+
+    private void cbEsCampurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEsCampurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbEsCampurActionPerformed
+
+    private void rbCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCashActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbCashActionPerformed
+
+    private void btnHitungPembelianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungPembelianActionPerformed
+        // TODO add your handling code here:
+        double total = 0;
+        if (cbNasgor.isSelected()) {
+            total += 12000;
+        }
+        if (cbSoto.isSelected()) {
+            total += 7000;
+        }
+        if (cbBakso.isSelected()) {
+            total += 15000;
+        }
+        if (cbMieAyam.isSelected()) {
+            total += 13000;
+        }
+        if (cbAyamGeprek.isSelected()) {
+            total += 10000;
+        }
+        if (cbEsTeh.isSelected()) {
+            total += 3000;
+        }
+        if (cbEsJeruk.isSelected()) {
+            total += 4000;
+        }
+        if (cbEsCampur.isSelected()) {
+            total += 7000;
+        }
+        lbPembelian.setText(String.valueOf(total));
+        totalPembelian = total;
+        tbSaldoPembeli.setEditable(true);
+    }//GEN-LAST:event_btnHitungPembelianActionPerformed
+
+    private void btnHitungKembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianActionPerformed
+        // TODO add your handling code here:
+        double uangSaldoPembeli = Double.parseDouble(tbSaldoPembeli.getText());
         
-        double kembalian = pb.BayarGoPay(Integer.parseInt(pilihan), saldo, totalBelanja);
-        lbSisaSaldoGopay.setText("Rp. " + String.valueOf(kembalian));
-        
-        switch (pilihan) {
-            case "1123":
-                lbNamaGopay.setText("Nanang");
+        int user_rekening;
+        String nama = String.valueOf(cmbNama.getSelectedItem());
+        switch (nama) {
+            case "Andika":
+                user_rekening = 12345678;
                 break;
-            case "1234":
-                lbNamaGopay.setText("Andika");
+            case "Nanang":
+                user_rekening = 23456789;
                 break;
-            case "1345":
-                lbNamaGopay.setText("Maulvi");
+            case "Maulvi":
+                user_rekening = 34567890;
                 break;
-            case "1456":
-                lbNamaGopay.setText("Marvin");
+            default:
+                user_rekening = 00000000;
                 break;
         }
-    }//GEN-LAST:event_btnHitungKembalianGopayActionPerformed
+        
+        double biaya_layanan = 0;
+        double total_kembalian = 0;
+        if (rbGopay.isSelected()) {
+            biaya_layanan = 3 * totalPembelian / 100;
+            
+            double kembalian = pb.BayarGoPay(user_rekening, uangSaldoPembeli, totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        } else if (rbShopeepay.isSelected()) {
+            biaya_layanan = 3 * totalPembelian / 100;
+            
+            double kembalian = pb.BayarShopee(user_rekening, uangSaldoPembeli, totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        } else if (rbQris.isSelected()) {
+            biaya_layanan = 5 * totalPembelian / 100;
+            
+            double kembalian = pb.BayarQris(uangSaldoPembeli, "123", totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        } else if (rbEwallet.isSelected()) {
+            biaya_layanan = 7 * totalPembelian / 100;
+            
+            double kembalian = pb.BayareWallet(uangSaldoPembeli, 1234, user_rekening, totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        } else if (rbKartuKredit.isSelected()) {
+            biaya_layanan = 5000;
+            
+            double kembalian = pb.BayarKreditCard(uangSaldoPembeli, 1234, user_rekening, totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        } else if (rbKartuDebit.isSelected()) {
+            biaya_layanan = 3000;
+            
+            double kembalian = pb.BayarDebitCard(uangSaldoPembeli, 1234, user_rekening, totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        } else {
+            biaya_layanan = 0;
+            
+            double kembalian = pb.BayarCash(uangSaldoPembeli, totalPembelian);
+            total_kembalian = kembalian - biaya_layanan;
+        }
+        
+        if (total_kembalian <= 0) {
+            JOptionPane.showMessageDialog(this, "Saldo atau uang Anda tidak cukup", "Peringata!", JOptionPane.ERROR_MESSAGE);
+        }
+        lbKembalian.setText("Rp. " + String.valueOf(total_kembalian) + "(+Rp. " + String.valueOf(biaya_layanan) + ")");
+    }//GEN-LAST:event_btnHitungKembalianActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
-        cbIdUserGopay.setSelectedIndex(0);
-        tbSaldoGopay.setText("");
-        tbTotalBelanjaGopay.setText("");
-        lbSisaSaldoGopay.setText("Rp. 0");
-        lbNamaGopay.setText("-");
+        cbNasgor.setSelected(false);
+        cbSoto.setSelected(false);
+        cbBakso.setSelected(false);
+        cbMieAyam.setSelected(false);
+        cbAyamGeprek.setSelected(false);
+        cbEsTeh.setSelected(false);
+        cbEsJeruk.setSelected(false);
+        cbEsCampur.setSelected(false);
+        
+        cmbNama.setSelectedIndex(0);
+        lbPembelian.setText("0");
+        tbSaldoPembeli.setEditable(false);
+        rbCash.setSelected(true);
+        lbKembalian.setText("0 (+Rp. 0");
     }//GEN-LAST:event_btnResetActionPerformed
-
-    private void btnHitungKembalianShopeepayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianShopeepayActionPerformed
-        // TODO add your handling code here:
-        String pilihan = String.valueOf(cbIdUserShopeepay.getSelectedItem());
-        double saldo = Double.parseDouble(tbSaldoShopeepay.getText());
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaShopeepay.getText());
-        
-        double kembalian = pb.BayarShopee(Integer.parseInt(pilihan), saldo, totalBelanja);
-        lbSisaSaldoShopeepay.setText("Rp. " + String.valueOf(kembalian));
-        
-        switch (pilihan) {
-            case "6123":
-                lbNamaShopeepay.setText("Andika");
-                break;
-            case "6234":
-                lbNamaShopeepay.setText("Maulvi");
-                break;
-            case "6345":
-                lbNamaShopeepay.setText("Nanang");
-                break;
-            case "6456":
-                lbNamaShopeepay.setText("Risky");
-                break;
-        }
-    }//GEN-LAST:event_btnHitungKembalianShopeepayActionPerformed
-
-    private void btnResetShopeepayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetShopeepayActionPerformed
-        // TODO add your handling code here:
-        cbIdUserShopeepay.setSelectedIndex(0);
-        tbSaldoShopeepay.setText("");
-        tbTotalBelanjaShopeepay.setText("");
-        lbSisaSaldoShopeepay.setText("Rp. 0");
-        lbNamaShopeepay.setText("-");
-    }//GEN-LAST:event_btnResetShopeepayActionPerformed
-
-    private void btnHitungKembalianCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianCashActionPerformed
-        // TODO add your handling code here:
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaCash.getText());
-        double uangTunai = Double.parseDouble(tbUangTunaiCash.getText());
-        
-        double kembalian = pb.BayarCash(uangTunai, totalBelanja);
-        
-        lbTotalKembalianCash.setText(String.valueOf(kembalian));
-    }//GEN-LAST:event_btnHitungKembalianCashActionPerformed
-
-    private void btnResetCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetCashActionPerformed
-        // TODO add your handling code here:
-        tbTotalBelanjaCash.setText("");
-        tbUangTunaiCash.setText("");
-        lbTotalKembalianCash.setText("Rp. 0");
-    }//GEN-LAST:event_btnResetCashActionPerformed
-
-    private void btnHitungKembalianQrisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianQrisActionPerformed
-        // TODO add your handling code here:
-        String pilihan = String.valueOf(cbKodeVoucherQris.getSelectedItem());
-        
-        double saldo = Double.parseDouble(tbSaldoQris.getText());
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaQris.getText());
-        
-        double kembalian = pb.BayarQris(saldo, pilihan, totalBelanja);
-        lbTotalKembalianQris.setText("Rp. " + String.valueOf(kembalian));
-    }//GEN-LAST:event_btnHitungKembalianQrisActionPerformed
-
-    private void btnResetQrisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetQrisActionPerformed
-        // TODO add your handling code here:
-        cbKodeVoucherQris.setSelectedIndex(0);
-        tbSaldoQris.setText("");
-        tbTotalBelanjaQris.setText("");
-        lbTotalKembalianQris.setText("Rp. 0");
-    }//GEN-LAST:event_btnResetQrisActionPerformed
-
-    private void btnHitungKembalianWalletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianWalletActionPerformed
-        // TODO add your handling code here:
-        String pilihan = String.valueOf(cbNoRekWallet.getSelectedItem());
-        int pin = 0;
-        switch (pilihan) {
-            case "12345678":
-                lbNamaWallet.setText("Maulvi");
-                pin = 1234;
-                break;
-            case "13456789":
-                lbNamaWallet.setText("Nanang");
-                pin = 5678;
-                break;
-            case "14567890":
-                lbNamaWallet.setText("Andika");
-                pin = 9012;
-                break;
-            case "15678901":
-                lbNamaWallet.setText("Risky");
-                pin = 3456;
-                break;
-        }
-        
-        double saldo = Double.parseDouble(tbSaldoWallet.getText());
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaWallet.getText());
-        
-        double kembalian = pb.BayareWallet(saldo, pin, Integer.parseInt(pilihan), totalBelanja);
-        lbSisaSaldoWallet.setText("Rp. " + String.valueOf(kembalian));
-    }//GEN-LAST:event_btnHitungKembalianWalletActionPerformed
-
-    private void btnResetWalletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetWalletActionPerformed
-        // TODO add your handling code here:
-        cbNoRekWallet.setSelectedIndex(0);
-        tbSaldoWallet.setText("");
-        tbTotalBelanjaWallet.setText("");
-        lbSisaSaldoWallet.setText("Rp. 0");
-        lbNamaWallet.setText("-");
-    }//GEN-LAST:event_btnResetWalletActionPerformed
-
-    private void btnHitungKembalianKreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianKreditActionPerformed
-        // TODO add your handling code here:
-        String pilihan = String.valueOf(cbNoRekKredit.getSelectedItem());
-        int pin = 0;
-        switch (pilihan) {
-            case "21234567":
-                lbNamaKredit.setText("Maulvi");
-                pin = 1234;
-                break;
-            case "22345678":
-                lbNamaKredit.setText("Andika");
-                pin = 2345;
-                break;
-            case "23456789":
-                lbNamaKredit.setText("Nanang");
-                pin = 3456;
-                break;
-            case "24567890":
-                lbNamaKredit.setText("Risky");
-                pin = 4567;
-                break;
-        }
-        
-        double saldo = Double.parseDouble(tbSaldoKredit.getText());
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaKredit.getText());
-        
-        double kembalian = pb.BayarKreditCard(saldo, pin, Integer.parseInt(pilihan), totalBelanja);
-        lbSisaSaldoKredit .setText("Rp. " + String.valueOf(kembalian));
-    }//GEN-LAST:event_btnHitungKembalianKreditActionPerformed
-
-    private void btnHitungKembalianDebitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungKembalianDebitActionPerformed
-        // TODO add your handling code here:
-        String pilihan = String.valueOf(cbNoRekDebit.getSelectedItem());
-        int pin = 0;
-        switch (pilihan) {
-            case "31234567":
-                lbNamaDebit.setText("Maulvi");
-                pin = 1234;
-                break;
-            case "32345678":
-                lbNamaDebit.setText("Andika");
-                pin = 2345;
-                break;
-            case "33456789":
-                lbNamaDebit.setText("Nanang");
-                pin = 3456;
-                break;
-            case "34567890":
-                lbNamaDebit.setText("Risky");
-                pin = 4567;
-                break;
-        }
-        
-        double saldo = Double.parseDouble(tbSaldoDebit.getText());
-        double totalBelanja = Double.parseDouble(tbTotalBelanjaDebit.getText());
-        
-        double kembalian = pb.BayarDebitCard(saldo, pin, Integer.parseInt(pilihan), totalBelanja);
-        lbSisaSaldoDebit .setText("Rp. " + String.valueOf(kembalian));
-    }//GEN-LAST:event_btnHitungKembalianDebitActionPerformed
-
-    private void btnResetKreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetKreditActionPerformed
-        // TODO add your handling code here:
-        cbNoRekKredit.setSelectedIndex(0);
-        tbSaldoKredit.setText("");
-        tbTotalBelanjaKredit.setText("");
-        lbSisaSaldoKredit.setText("Rp. 0");
-        lbNamaKredit.setText("-");
-    }//GEN-LAST:event_btnResetKreditActionPerformed
-
-    private void btnResetDebitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetDebitActionPerformed
-        // TODO add your handling code here:
-        cbNoRekDebit.setSelectedIndex(0);
-        tbSaldoDebit.setText("");
-        tbTotalBelanjaDebit.setText("");
-        lbSisaSaldoDebit.setText("Rp. 0");
-        lbNamaDebit.setText("-");
-    }//GEN-LAST:event_btnResetDebitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1057,6 +552,7 @@ public class Pembayaran extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Pembayaran.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1067,53 +563,26 @@ public class Pembayaran extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnHitungKembalianCash;
-    private javax.swing.JButton btnHitungKembalianDebit;
-    private javax.swing.JButton btnHitungKembalianGopay;
-    private javax.swing.JButton btnHitungKembalianKredit;
-    private javax.swing.JButton btnHitungKembalianQris;
-    private javax.swing.JButton btnHitungKembalianShopeepay;
-    private javax.swing.JButton btnHitungKembalianWallet;
+    private javax.swing.JButton btnHitungKembalian;
+    private javax.swing.JButton btnHitungPembelian;
     private javax.swing.JButton btnReset;
-    private javax.swing.JButton btnResetCash;
-    private javax.swing.JButton btnResetDebit;
-    private javax.swing.JButton btnResetKredit;
-    private javax.swing.JButton btnResetQris;
-    private javax.swing.JButton btnResetShopeepay;
-    private javax.swing.JButton btnResetWallet;
-    private javax.swing.JComboBox<String> cbIdUserGopay;
-    private javax.swing.JComboBox<String> cbIdUserShopeepay;
-    private javax.swing.JComboBox<String> cbKodeVoucherQris;
-    private javax.swing.JComboBox<String> cbNoRekDebit;
-    private javax.swing.JComboBox<String> cbNoRekKredit;
-    private javax.swing.JComboBox<String> cbNoRekWallet;
+    private javax.swing.JCheckBox cbAyamGeprek;
+    private javax.swing.JCheckBox cbBakso;
+    private javax.swing.JCheckBox cbEsCampur;
+    private javax.swing.JCheckBox cbEsJeruk;
+    private javax.swing.JCheckBox cbEsTeh;
+    private javax.swing.JCheckBox cbMieAyam;
+    private javax.swing.JCheckBox cbNasgor;
+    private javax.swing.JCheckBox cbSoto;
+    private javax.swing.JComboBox<String> cmbNama;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1122,37 +591,16 @@ public class Pembayaran extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel lbNamaDebit;
-    private javax.swing.JLabel lbNamaGopay;
-    private javax.swing.JLabel lbNamaKredit;
-    private javax.swing.JLabel lbNamaShopeepay;
-    private javax.swing.JLabel lbNamaWallet;
-    private javax.swing.JLabel lbSisaSaldoDebit;
-    private javax.swing.JLabel lbSisaSaldoGopay;
-    private javax.swing.JLabel lbSisaSaldoKredit;
-    private javax.swing.JLabel lbSisaSaldoShopeepay;
-    private javax.swing.JLabel lbSisaSaldoWallet;
-    private javax.swing.JLabel lbTotalKembalianCash;
-    private javax.swing.JLabel lbTotalKembalianQris;
-    private javax.swing.JTextField tbSaldoDebit;
-    private javax.swing.JTextField tbSaldoGopay;
-    private javax.swing.JTextField tbSaldoKredit;
-    private javax.swing.JTextField tbSaldoQris;
-    private javax.swing.JTextField tbSaldoShopeepay;
-    private javax.swing.JTextField tbSaldoWallet;
-    private javax.swing.JTextField tbTotalBelanjaCash;
-    private javax.swing.JTextField tbTotalBelanjaDebit;
-    private javax.swing.JTextField tbTotalBelanjaGopay;
-    private javax.swing.JTextField tbTotalBelanjaKredit;
-    private javax.swing.JTextField tbTotalBelanjaQris;
-    private javax.swing.JTextField tbTotalBelanjaShopeepay;
-    private javax.swing.JTextField tbTotalBelanjaWallet;
-    private javax.swing.JTextField tbUangTunaiCash;
+    private javax.swing.JLabel lbKembalian;
+    private javax.swing.JLabel lbPembelian;
+    private javax.swing.ButtonGroup pembelian;
+    private javax.swing.JRadioButton rbCash;
+    private javax.swing.JRadioButton rbEwallet;
+    private javax.swing.JRadioButton rbGopay;
+    private javax.swing.JRadioButton rbKartuDebit;
+    private javax.swing.JRadioButton rbKartuKredit;
+    private javax.swing.JRadioButton rbQris;
+    private javax.swing.JRadioButton rbShopeepay;
+    private javax.swing.JTextField tbSaldoPembeli;
     // End of variables declaration//GEN-END:variables
 }
