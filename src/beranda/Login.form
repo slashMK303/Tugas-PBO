@@ -211,7 +211,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="* Andika Risky Setpiawan ( L200230023 )"/>
+            <Property name="text" type="java.lang.String" value="* Andika Risky Septiawan ( L200230023 )"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">

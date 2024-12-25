@@ -370,7 +370,7 @@ public class Pembayaran extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel1.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Evil Empire", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Metode Pembayaran");
 
@@ -387,7 +387,7 @@ public class Pembayaran extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -504,7 +504,7 @@ public class Pembayaran extends javax.swing.JFrame {
         if (total_kembalian < 0) {
             JOptionPane.showMessageDialog(this, "Saldo atau uang Anda tidak cukup", "Peringata!", JOptionPane.ERROR_MESSAGE);
         }
-        lbKembalian.setText("Rp. " + String.valueOf(total_kembalian) + "(+Rp. " + String.valueOf(biaya_layanan) + ")");
+        lbKembalian.setText("Rp. " + String.valueOf(total_kembalian) + " (+Rp. " + String.valueOf(biaya_layanan) + ")");
     }//GEN-LAST:event_btnHitungKembalianActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed

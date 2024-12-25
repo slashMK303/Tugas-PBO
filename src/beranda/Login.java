@@ -119,7 +119,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setText("Developed By:");
 
-        jLabel6.setText("* Andika Risky Setpiawan ( L200230023 )");
+        jLabel6.setText("* Andika Risky Septiawan ( L200230023 )");
 
         jLabel7.setText("* Nanang Marvin Kurniawan ( L200230015 )");
 
